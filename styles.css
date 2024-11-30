@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    background:  #1a73e8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: lighter;
+    opacity: 0.9;
+}
+
+/* Preferences Section */
+#preferences-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preferences-container h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+label {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+select, input[type="color"] {
+    padding: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Cryptocurrency List Styling */
+#crypto-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.crypto-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.crypto-card:hover {
+    transform: translateY(-5px);
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004080;
+}
+
+#reset-comparison, #reset-comparison-fav {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#reset-comparison:hover , #reset-comparison-fav:hover{
+    background-color: #c82333;
+}
+
+#comparison-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    background-color: #2d3e50;
+    color: white;
+    padding: 10px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .preferences-container {
+        text-align: center;
+    }
+
+    #crypto-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .crypto-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+
+    #reset-comparison {
+        margin: 20px auto;
+    }
+}
+
+/* Animation for Fade-In Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

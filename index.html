@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Cryptocurrency Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cryptocurrency Tracker</h1>
+        <p>Track real-time prices of cryptocurrencies</p>
+    </header>
+
+    <!-- Preferences Section: Sorting, Per Page, Color Picker -->
+    <section id="preferences-section">
+        <div class="preferences-container">
+            <h3>Preferences</h3>
+            
+            <label for="sorting">Sort By: </label>
+            <select id="sorting" onchange="changeSorting(this.value)">
+                <option value="market_cap_desc">Market Cap: High to Low</option>
+                <option value="market_cap_asc">Market Cap: Low to High</option>
+                <option value="price_desc">Price: High to Low</option>
+                <option value="price_asc">Price: Low to High</option>
+            </select>
+
+            <label for="per-page">Per Page: </label>
+            <select id="per-page" onchange="changePerPage(this.value)">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
+
+            <label for="color-picker">Select Button and Header Color: </label>
+            <input type="color" id="color-picker" onchange="changeColor(this.value)">
+        </div>
+    </section>
+
+    <!-- Cryptocurrency Listing -->
+    <section id="crypto-list">
+        <h2>Popular Cryptocurrencies</h2>
+        <div id="crypto-container"></div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison-section">
+        <h2>Comparison</h2>
+        <div id="comparison-container"></div>
+        <button id="reset-comparison">Clear Comparison</button>
+    </section>
+
+    <!-- Favorite Cryptocurrencies Section -->
+    <section id="favorites-section">
+        <h2>Your Favorite Cryptocurrencies</h2>
+        <div id="favorite-crypto-container"></div>
+        <button id="reset-comparison-fav">Clear Favorite</button>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Powered by CoinGecko API</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
